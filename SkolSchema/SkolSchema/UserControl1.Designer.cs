@@ -151,6 +151,7 @@
             this.Controls.Add(this.StarttidtxtBox);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(350, 200);
+            this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

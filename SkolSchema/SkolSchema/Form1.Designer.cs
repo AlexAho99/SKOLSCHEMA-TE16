@@ -38,6 +38,7 @@
             this.Spara = new System.Windows.Forms.Button();
             this.Ladda = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
+            this.userControl11 = new ContainerUserControl.UserControl1();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -138,11 +139,20 @@
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.userControl11.Location = new System.Drawing.Point(353, 50);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(275, 200);
+            this.userControl11.TabIndex = 21;
+            // 
             // Skolschema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 953);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.Ladda);
             this.Controls.Add(this.Spara);
@@ -173,6 +183,7 @@
         private System.Windows.Forms.Button Spara;
         private System.Windows.Forms.Button Ladda;
         private new System.Windows.Forms.Button Close;
+        private ContainerUserControl.UserControl1 userControl11;
     }
 }
 

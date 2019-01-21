@@ -82,6 +82,11 @@ namespace ContainerUserControl
                 LektionLängd.Text = time.LektionLängd + "\t";
             }
         }
+
+        private void UserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     //En class som fungerar med listan Time.
