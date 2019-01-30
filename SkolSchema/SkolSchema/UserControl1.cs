@@ -14,15 +14,17 @@ namespace ContainerUserControl
     public partial class UserControl1: UserControl
     {
         List<Time> time;
-        //En sorterad lista.
+        List<Text> text;
+        List<Text1> text1;
 
         public UserControl1()
         {
             InitializeComponent();
             time = new List<Time>();
+            text = new List<Text>();
+            text1 = new List<Text1>();
         }
 
-        //Detta är UserControl.
         [Designer("System.Windows.Forms.Design.ParentControlDesigner, System.Design", typeof(IDesigner))]
         public class UserControl : System.Windows.Forms.UserControl
         {
@@ -49,10 +51,9 @@ namespace ContainerUserControl
 
         }
 
-        //Detta är knappen som lägger till tiden.
         private void LäggtillknappStarttid_Click(object sender, EventArgs e)
         {
-            Time tmp = new Time(int.Parse(StarttidtxtBox.Text), int.Parse(LektionlängdtxtBox.Text));
+            Time tmp = new Time(double.Parse(StarttidtxtBox.Text), double.Parse(LektionlängdtxtBox.Text));
 
             time.Add(tmp);
             PrintTimeList();
@@ -73,7 +74,6 @@ namespace ContainerUserControl
 
         }
 
-        //Detta låter oss printa ut tidenerna.
         private void PrintTimeList()
         {
             foreach (Time time in time)
@@ -83,13 +83,68 @@ namespace ContainerUserControl
             }
         }
 
-        private void UserControl1_Load(object sender, EventArgs e)
+        private void PrintTextList()
+        {
+            foreach (Text text in text)
+            {
+                Förnamn.Text = text.Förnamn + "\t";
+                Efternamn.Text = text.Efternamn + "\t";
+            }
+        }
+
+        private void PrintText1List()
+        {
+            foreach (Text1 text1 in text1)
+            {
+                KursNamnTxtBox.Text = text1.KursNamnTxtBox + "\t";
+                SalNrTxtBox.Text = text1.SalNrTxtBox + "\t";
+            }
+        }
+
+        private void NameKnapp_Click(object sender, EventArgs e)
+        {
+            Text tmp1 = new Text(Förnamn.Text, Efternamn.Text);
+            text.Add(tmp1);
+            PrintTextList();
+        }
+
+        private void KursButton_Click(object sender, EventArgs e)
+        {
+            Text1 tmp2 = new Text1(KursNamnTxtBox.Text, SalNrTxtBox.Text);
+            text1.Add(tmp2);
+            PrintText1List();
+        }
+
+        private void FörnamnES_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EfternamnES_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Efternamn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Förnamn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KursNamnTxtBox_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
-
-    //En class som fungerar med listan Time.
     class Time
     {
         double starttid;
@@ -105,4 +160,33 @@ namespace ContainerUserControl
         public double LektionLängd { get => lektionLängd; set => lektionLängd = value; }
     }
 
+    class Text
+    {
+        public string FörnamnES;
+        public string EfternamnES;
+
+        public Text(string FörnamnES, string EfternamnES)
+        {
+            this.FörnamnES = FörnamnES;
+            this.EfternamnES = EfternamnES;
+        }
+
+        public string Förnamn { get => FörnamnES; set => FörnamnES = value; }
+        public string Efternamn { get => EfternamnES; set => EfternamnES = value; }
+    }
+
+    class Text1
+    {
+        public string KursNamnES;
+        public string SalNrES;
+
+        public Text1(string KursNamnES, string SalNrES)
+        {
+            this.KursNamnES = KursNamnES;
+            this.SalNrES = SalNrES;
+        }
+
+        public string KursNamnTxtBox { get => KursNamnES; set => KursNamnES = value; }
+        public string SalNrTxtBox { get => SalNrES; set => SalNrES = value; }
+    }
 }

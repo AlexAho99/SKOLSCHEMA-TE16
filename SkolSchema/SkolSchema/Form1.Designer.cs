@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.Måndag = new System.Windows.Forms.Label();
-            this.Tisdag = new System.Windows.Forms.Label();
-            this.Onsdag = new System.Windows.Forms.Label();
-            this.Torsdag = new System.Windows.Forms.Label();
-            this.Fredag = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Spara = new System.Windows.Forms.Button();
             this.Ladda = new System.Windows.Forms.Button();
@@ -47,56 +42,6 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateChanged);
-            // 
-            // Måndag
-            // 
-            this.Måndag.AutoSize = true;
-            this.Måndag.Location = new System.Drawing.Point(350, 24);
-            this.Måndag.Name = "Måndag";
-            this.Måndag.Size = new System.Drawing.Size(59, 17);
-            this.Måndag.TabIndex = 6;
-            this.Måndag.Text = "Måndag";
-            this.Måndag.Click += new System.EventHandler(this.Måndag_Click);
-            // 
-            // Tisdag
-            // 
-            this.Tisdag.AutoSize = true;
-            this.Tisdag.Location = new System.Drawing.Point(656, 24);
-            this.Tisdag.Name = "Tisdag";
-            this.Tisdag.Size = new System.Drawing.Size(51, 17);
-            this.Tisdag.TabIndex = 7;
-            this.Tisdag.Text = "Tisdag";
-            this.Tisdag.Click += new System.EventHandler(this.Tisdag_Click);
-            // 
-            // Onsdag
-            // 
-            this.Onsdag.AutoSize = true;
-            this.Onsdag.Location = new System.Drawing.Point(962, 24);
-            this.Onsdag.Name = "Onsdag";
-            this.Onsdag.Size = new System.Drawing.Size(58, 17);
-            this.Onsdag.TabIndex = 8;
-            this.Onsdag.Text = "Onsdag";
-            this.Onsdag.Click += new System.EventHandler(this.Onsdag_Click);
-            // 
-            // Torsdag
-            // 
-            this.Torsdag.AutoSize = true;
-            this.Torsdag.Location = new System.Drawing.Point(1268, 24);
-            this.Torsdag.Name = "Torsdag";
-            this.Torsdag.Size = new System.Drawing.Size(61, 17);
-            this.Torsdag.TabIndex = 9;
-            this.Torsdag.Text = "Torsdag";
-            this.Torsdag.Click += new System.EventHandler(this.Torsdag_Click);
-            // 
-            // Fredag
-            // 
-            this.Fredag.AutoSize = true;
-            this.Fredag.Location = new System.Drawing.Point(1574, 24);
-            this.Fredag.Name = "Fredag";
-            this.Fredag.Size = new System.Drawing.Size(53, 17);
-            this.Fredag.TabIndex = 10;
-            this.Fredag.Text = "Fredag";
-            this.Fredag.Click += new System.EventHandler(this.Fredag_Click);
             // 
             // linkLabel1
             // 
@@ -142,9 +87,9 @@
             // userControl11
             // 
             this.userControl11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.userControl11.Location = new System.Drawing.Point(353, 50);
+            this.userControl11.Location = new System.Drawing.Point(408, 50);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(275, 200);
+            this.userControl11.Size = new System.Drawing.Size(350, 250);
             this.userControl11.TabIndex = 21;
             // 
             // Skolschema
@@ -157,11 +102,6 @@
             this.Controls.Add(this.Ladda);
             this.Controls.Add(this.Spara);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.Fredag);
-            this.Controls.Add(this.Torsdag);
-            this.Controls.Add(this.Onsdag);
-            this.Controls.Add(this.Tisdag);
-            this.Controls.Add(this.Måndag);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Skolschema";
             this.Text = "Form1";
@@ -174,11 +114,6 @@
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label Måndag;
-        private System.Windows.Forms.Label Tisdag;
-        private System.Windows.Forms.Label Onsdag;
-        private System.Windows.Forms.Label Torsdag;
-        private System.Windows.Forms.Label Fredag;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button Spara;
         private System.Windows.Forms.Button Ladda;
